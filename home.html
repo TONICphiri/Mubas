@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUBAS Hostel Finder - Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Hostel Finder Logo" width="100" height="50">
+        </div>
+        <h1>Hostel Finder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostel-list.html">Hostel List</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="search-section">
+    <h2>Find Your Ideal Hostel</h2>
+    <form action="hostel-list.html">
+        <input type="text" placeholder="Search by name or location...">
+        <button type="submit">Search</button>
+    </form>
+</section>
+
+<section class="featured-hostels">
+    <div class="container">
+        <h2>Featured Hostels</h2>
+        <div id="hostelContainer">
+            <!-- Images will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 MUBAS Hostel Finder. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hostelContainer = document.getElementById('hostelContainer');
+
+    // Fetch the list of images from the server
+    fetch('list_images.php')
+        .then(response => response.json())
+        .then(images => {
+            if (images.length > 0) {
+                images.forEach(image => {
+                    const hostelDiv = document.createElement('div');
+                    hostelDiv.classList.add('hostel-listing');
+                    
+                    hostelDiv.innerHTML = `
+                        <img src="uploads/${image}" alt="${image}" width="200">
+                        <div class="hostel-info">
+                            <h3>${image}</h3>
+                            <p>Location: Placeholder Location</p>
+                            <a href="detail.html">View Details</a>
+                        </div>
+                    `;
+                    
+                    hostelContainer.appendChild(hostelDiv);
+                });
+            } else {
+                hostelContainer.innerHTML = '<p>No hostels found.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching images:', error);
+            hostelContainer.innerHTML = '<p>Error loading hostels.</p>';
+        });
+});
+</script>
+<script src="home.js"></script>
+<script src="home1.js"></script>
+<script src="home2.js"></script>
+<script src="home3.js"></script
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Details</title>
+    <link rel="stylesheet" href="container.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Hostel Details</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostel-list.html">Hostel List</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="hostelDetails"></section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 MUBAS Hostel Finder. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Assuming hostel details are passed via localStorage for simplicity
+    document.addEventListener('DOMContentLoaded', function() {
+        const hostelDetails = JSON.parse(localStorage.getItem('selectedHostel'));
+
+        if (hostelDetails) {
+            const detailsSection = document.getElementById('hostelDetails');
+            detailsSection.innerHTML = `
+                <img src="${hostelDetails.image}" alt="${hostelDetails.name}" width="300">
+                <h2>${hostelDetails.name}</h2>
+                <p>Location: ${hostelDetails.location}</p>
+                <p>Description: ${hostelDetails.description}</p>
+                <p>Price: MK ${hostelDetails.price}</p>
+                <p>Distance from School: ${hostelDetails.distance} km</p>
+                <p>Contact: ${hostelDetails.phone}</p>
+            `;
+        } else {
+            document.getElementById('hostelDetails').innerHTML = '<p>Hostel details not available.</p>';
+        }
+    });
+</script>
+<script src="container.js"></script>
+</body>
+</html>

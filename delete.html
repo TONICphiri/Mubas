@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Records | Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="C:\xampp\htdocs\MUBAS\images\logo.png" alt="MUBAS Hostel Finder Logo" width="100" height="50">
+        </div>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostel-list.html">Hostel List</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="delete-page">
+        <h2>Delete Records</h2>
+
+        <!-- Form to Delete Student -->
+        <form id="delete-student-form" action="delete_student.php" method="POST">
+            <label for="student-id">Delete Student by ID:</label>
+            <input type="text" id="student-id" name="student-id" placeholder="Enter Student ID" required>
+            <button type="submit">Delete Student</button>
+        </form>
+
+        <!-- Form to Delete Hostel -->
+        <form id="delete-hostel-form" action="delete_hostel.php" method="POST">
+            <label for="hostel-id">Delete Hostel by ID:</label>
+            <input type="text" id="hostel-id" name="hostel-id" placeholder="Enter Hostel ID" required>
+            <button type="submit">Delete Hostel</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 MUBAS Hostel Finder. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

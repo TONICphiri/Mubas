@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('C:/xampp/htdocs/mubas_hostel_finder/images/background-1696064_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #002147;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6600;
+    color: #ffffff;
+}
+
+/* Login Form Styles */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #87CEEB;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #002147;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #002147;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #002147;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #001534;
+}
+
+/* Links Styles */
+.links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #002147;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002147;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+}
+
+/* Ensure footer is below content */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Adjust styles for small screens (tablets and below) */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .header-container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 90%; /* Make the container more narrow for small screens */
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px; /* Slightly smaller inputs */
+    }
+
+    .form-group button {
+        font-size: 16px; /* Slightly smaller button */
+    }
+}
+
+/* Further adjustments for very small screens (phones) */
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .header-container {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 100%; /* Take full width */
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 13px;
+    }
+
+    .form-group button {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Hostel | Admin</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="C:\xampp\htdocs\MUBAS\logo.png" alt="MUBAS Hostel Finder Logo" width="100" height="50">
+        </div>
+        <h1>Update Hostel Information</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Home</a></li>
+                <li><a href="hostel-list.html">Hostel List</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="update-page">
+        <h2>Update Hostel Information</h2>
+        <form id="update-hostel-form" enctype="multipart/form-data" action="update_hostel.php" method="POST">
+            <label for="hostel-id-update">Hostel ID:</label>
+            <input type="text" id="hostel-id-update" name="hostel-id-update" placeholder="Enter Hostel ID" required>
+
+            <label for="hostel-photo">Upload Hostel Photos:</label>
+            <input type="file" id="hostel-photo" name="hostel-photo[]" multiple required>
+
+            <label for="hostel-description">Hostel Description:</label>
+            <textarea id="hostel-description" name="hostel-description" placeholder="Enter Hostel Description" required></textarea>
+
+            <button type="submit">Update Hostel</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 MUBAS Hostel Finder. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | MUBAS Hostel Finder</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="C:\xampp\htdocs\MUBAS\images\logo.png" alt="MUBAS Hostel Finder Logo" width="40" height="40">
+        </div>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostel-list.html">Hostel List</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="dashboard-section">
+        <div class="container">
+            <h2>Manage Hostels</h2>
+            <form id="hostelForm">
+                <div class="form-group">
+                    <label for="hostelName">Hostel Name:</label>
+                    <input type="text" id="hostelName" name="hostelName" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="landlordPhone">Landlord Phone Number:</label>
+                    <input type="tel" id="landlordPhone" name="landlordPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price (per month):</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+                <div class="form-group">
+                    <label for="distance">Distance from School (km):</label>
+                    <input type="number" id="distance" name="distance" required>
+                </div>
+                <div class="form-group">
+                    <label for="hostelImage">Upload Hostel Image:</label>
+                    <input type="file" id="hostelImage" name="hostelImage" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add Hostel</button>
+                </div>
+            </form>
+
+            <h2>Hostel List</h2>
+            <table id="hostelTable">
+                <thead>
+                    <tr>
+                        <th>photo</th>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Price (MK)</th>
+                        <th>Phone Number</th>
+                        <th>Distance (km)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Hostel entries will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 MUBAS Hostel Finder. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="admin.js"></script>
+</body>
+</html>

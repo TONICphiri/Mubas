@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #87CEEB; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.header-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to right, white, #ff6600); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    padding: 10px 20px;
+    border: 2px solid #ff6600; 
+    display: inline-block;
+    border-radius: 8px;
+    animation: slide 10s Fade; 
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.logo img {
+    max-height: 60px;
+    max-width: 60px;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #002147;
+    transition: background-color 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #ff6600;
+    color: white;
+}
+
+.main-content {
+    padding: 50px;
+    margin: 30px auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.gallery-container {
+    background-color: #87CEEB;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px; 
+}
+
+.hostel-item {
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.hostel-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px #FF9800;
+}
+
+.hostel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.hostel-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+}
+
+.hostel-item:hover .hostel-info {
+    color: #FF9800;
+}
+
+.footer-container {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFDD0; /* Cream White */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #002147; /* Dark Blue */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #002147; /* Dark Blue */
+    padding: 20px 0;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    display: block;
+    width: 100px;
+    height: 50px;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Main Section Styles */
+main {
+    padding: 40px 0;
+    background-color: #87CEEB; /* Sky Blue */
+}
+
+.contact-section {
+    background-color: #FFFDD0; /* Cream White */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #002147; /* Dark Blue */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #002147; /* Dark Blue */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #001534; /* Slightly Darker Blue on Hover */
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #002147; /* Dark Blue */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002147; /* Dark Blue */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contact-section {
+        padding: 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
